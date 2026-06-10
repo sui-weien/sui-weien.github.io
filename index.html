@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sui Wei-En | Welcome ✨</title>
+    <title>Sui Wei-En | Academic & Personal Space ✨</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* --- CUTE PINK COLOR PALETTE & STYLES --- */
+        /* --- CUTE PINK COLOR PALETTE --- */
         :root {
             --bg-color: #FFEAEF;       /* Soft baby pink background */
-            --card-bg: #FFFFFF;        /* Clean white for the blocks */
-            --text-main: #4A4A4A;      /* Charcoal for soft readability */
-            --accent-pink: #FF6B8B;    /* Vibrant pink from your photo for accents */
-            --hover-pink: #FF8DA6;     /* Slightly lighter pink for hover effects */
-            --shadow: rgba(255, 182, 193, 0.4); 
+            --content-bg: #FFFFFF;    /* Clean white for the content sheet */
+            --text-main: #4A4A4A;      /* Dark grey for readability */
+            --accent-pink: #FF6B8B;    /* Signature vibrant pink */
+            --soft-pink: #FFF0F3;      /* Light pink accent blocks */
+            --line-color: #FFD1DC;    /* Pastel pink for divider lines */
         }
 
         body {
@@ -22,138 +22,209 @@
             background-color: var(--bg-color);
             color: var(--text-main);
             margin: 0;
-            padding: 40px 20px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        /* --- PROFILE HEADER --- */
-        .profile-container {
-            text-align: center;
+        /* --- CENTRAL CONTENT SHEET --- */
+        .container {
+            background-color: var(--content-bg);
+            max-width: 750px;
+            width: 100%;
+            border-radius: 30px; /* Extra rounded cozy corners */
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4);
+            box-sizing: border-box;
+            margin-top: 20px;
             margin-bottom: 40px;
         }
 
-        .profile-pic {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%; /* Makes your photo a cute circle */
-            border: 4px solid var(--card-bg);
-            box-shadow: 0 8px 16px var(--shadow);
-            object-fit: cover;
+        /* --- PROFILE BANNER --- */
+        .profile-header {
+            text-align: center;
+            border-bottom: 2px dashed var(--line-color);
+            padding-bottom: 30px;
+            margin-bottom: 35px;
         }
 
-        .profile-container h1 {
-            margin: 15px 0 5px 0;
-            font-size: 1.9rem;
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid var(--bg-color);
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 2.2rem;
             color: var(--accent-pink);
         }
 
-        .profile-container p {
-            margin: 5px 0 0 0;
-            font-size: 1.05rem;
+        .profile-header p {
+            margin: 8px 0 15px 0;
+            font-size: 1.1rem;
             color: #777;
             font-weight: 600;
         }
 
-        /* --- THE GRID LAYOUT --- */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            width: 100%;
-            max-width: 900px; /* Slightly wider to beautifully accommodate 5 cards */
-        }
-
-        /* --- CUTE BLOCK CARDS --- */
-        .card {
-            background-color: var(--card-bg);
-            border-radius: 25px; /* Extra rounded corners for that cute look */
-            padding: 30px;
-            text-align: center;
-            text-decoration: none;
-            color: var(--text-main);
-            box-shadow: 0 8px 24px var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* --- SOCIAL BUTTON LINKS --- */
+        .links-row {
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            border: 2px solid transparent;
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
-        /* Hover animation */
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: var(--accent-pink);
-            box-shadow: 0 12px 30px rgba(255, 107, 139, 0.3);
-        }
-
-        .card-icon {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-        }
-
-        .card h2 {
-            margin: 0 0 10px 0;
-            font-size: 1.4rem;
+        .btn {
+            background-color: var(--soft-pink);
             color: var(--accent-pink);
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            border: 1px solid var(--line-color);
         }
 
-        .card p {
-            margin: 0;
+        .btn:hover {
+            background-color: var(--accent-pink);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* --- SECTION FORMATTING --- */
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: var(--accent-pink);
+            font-size: 1.5rem;
+            border-left: 5px solid var(--accent-pink);
+            padding-left: 12px;
+            margin-bottom: 20px;
+        }
+
+        /* --- LIST & ITEMS STYLING --- */
+        .item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #FAF0F2;
+        }
+
+        .item:last-child {
+            border-bottom: none;
+        }
+
+        .item-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .item-meta {
+            font-size: 0.9rem;
+            color: #888;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .item-desc {
             font-size: 0.95rem;
-            line-height: 1.4;
-            color: #666;
+            line-height: 1.5;
+            color: #555;
         }
 
-        /* Footer styling */
+        /* Highlight block for papers */
+        .paper-blockquote {
+            background-color: var(--soft-pink);
+            border-left: 4px solid var(--accent-pink);
+            padding: 15px;
+            border-radius: 0 15px 15px 0;
+            margin: 10px 0;
+            font-size: 0.95rem;
+        }
+
         footer {
-            margin-top: 60px;
+            text-align: center;
             font-size: 0.85rem;
             color: #A0A0A0;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <div class="profile-container">
-        <img src="avatar.jpg" alt="Sui Wei-En" class="profile-pic">
-        <h1>Sui Wei-En ✨</h1>
-        <p>Biomedical Engineering & Structural Research</p>
-    </div>
+    <div class="container">
 
-    <div class="grid-container">
+        <header class="profile-header">
+            <img src="avatar.jpg" alt="Sui Wei-En" class="profile-pic">
+            <h1>Sui Wei-En ✨</h1>
+            <p>Biomedical Engineering & Structural Research</p>
+            
+            <div class="links-row">
+                <a href="https://scholar.google.com/citations?user=yGk77-kAAAAJ&hl=en" class="btn" target="_blank">🎓 Google Scholar</a>
+                <a href="https://www.linkedin.com/in/sui-wei-en/?skipRedirect=true" class="btn" target="_blank">💼 LinkedIn</a>
+                <a href="mailto:your-email@example.com" class="btn">🌸 Contact Me</a>
+            </div>
+        </header>
 
-        <a href="https://scholar.google.com/citations?user=yGk77-kAAAAJ&hl=en" class="card" target="_blank">
-            <div class="card-icon">🎓</div>
-            <h2>Google Scholar</h2>
-            <p>Track my citations, index indices, and full list of co-authored publications online.</p>
-        </a>
+        <section>
+            <h2>📚 Academic Background</h2>
+            
+            <div class="item">
+                <div class="item-title">Research Assistant / Student</div>
+                <div class="item-meta">Biomedical Engineering & Structural Insights</div>
+                <div class="item-desc">
+                    Focusing on the intersections of biomedical applications, structural mechanics, and materials engineering. 
+                </div>
+            </div>
 
-        <a href="Encoding Music Score.pdf" class="card">
-            <div class="card-icon">🔬</div>
-            <h2>Research Papers</h2>
-            <p>Explore my specific academic publications, abstracts, and engineering project breakdowns.</p>
-        </a>
+            </section>
 
-        <a href="https://www.linkedin.com/in/sui-wei-en/?skipRedirect=true" class="card" target="_blank">
-            <div class="card-icon">📚</div>
-            <h2>Academic CV</h2>
-            <p>View my experience, education background, and professional timeline on LinkedIn.</p>
-        </a>
+        <section>
+            <h2>🔬 Research Papers & Publications</h2>
+            
+            <div class="item">
+                <div class="item-title">Featured Publications</div>
+                <div class="item-meta">Track my live impact index via Google Scholar above.</div>
+                
+                <div class="paper-blockquote">
+                    <strong>"Title of Your Main Co-authored Research Paper Here"</strong><br>
+                    <span style="color:#777; font-size:0.85rem;">Sui Wei-En, et al. | Published in Journal Name (2026)</span>
+                </div>
+                
+                <div class="item-desc">
+                    Brief overview or short abstract summary of your structural findings, methodology, or biomedical experimental results. 
+                </div>
+                <p style="margin-top:10px;">
+                    <a href="my-paper.pdf" class="btn" style="padding: 4px 12px; font-size:0.8rem;" target="_blank">📄 Read PDF</a>
+                </p>
+            </div>
+        </section>
 
-        <a href="#" class="card">
-            <div class="card-icon">🎨</div>
-            <h2>Hobbies & Joy</h2>
-            <p>When I'm away from data, I enjoy exploring creative ideas and sharing my favorite things.</p>
-        </a>
-
-        <a href="https://www.linkedin.com/in/sui-wei-en/?skipRedirect=true" class="card" target="_blank">
-            <div class="card-icon">🌸</div>
-            <h2>Let's Connect</h2>
-            <p>Let's collaborate on engineering projects! Drop me a message on LinkedIn.</p>
-        </a>
+        <section>
+            <h2>🎨 Hobbies & Personal Interests</h2>
+            
+            <div class="item">
+                <div class="item-desc">
+                    When I am not deep into biomedical data or analyzing engineering frameworks, I like to balance my life with creative pursuits! 
+                    <br><br>
+                    🌸 <strong>What I'm into right now:</strong>
+                    <ul style="margin-top: 5px; padding-left: 20px; line-height: 1.6;">
+                        <li>Exploring design aesthetics and web creation.</li>
+                        <li>Café hopping and testing local matcha profiles.</li>
+                        <li>[Add another hobby here, like illustration, photography, or reading!]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
     </div>
 
