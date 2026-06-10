@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sui Wei-En | Welcome ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CUTE PINK COLOR PALETTE & STYLES --- */
+        :root {
+            --bg-color: #FFEAEF;       /* Soft baby pink background */
+            --card-bg: #FFFFFF;        /* Clean white for the blocks */
+            --text-main: #4A4A4A;      /* Charcoal for soft readability */
+            --accent-pink: #FF6B8B;    /* Vibrant pink from your photo for accents */
+            --hover-pink: #FF8DA6;     /* Slightly lighter pink for hover effects */
+            --shadow: rgba(255, 182, 193, 0.4); 
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- PROFILE HEADER --- */
+        .profile-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-pic {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%; /* Makes your photo a cute circle */
+            border: 4px solid var(--card-bg);
+            box-shadow: 0 8px 16px var(--shadow);
+            object-fit: cover;
+        }
+
+        .profile-container h1 {
+            margin: 15px 0 5px 0;
+            font-size: 1.9rem;
+            color: var(--accent-pink);
+        }
+
+        .profile-container p {
+            margin: 5px 0 0 0;
+            font-size: 1.05rem;
+            color: #777;
+            font-weight: 600;
+        }
+
+        /* --- THE GRID LAYOUT --- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        /* --- CUTE BLOCK CARDS --- */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 25px; /* Extra rounded corners for that cute look */
+            padding: 30px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-main);
+            box-shadow: 0 8px 24px var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid transparent;
+        }
+
+        /* Hover animation */
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-pink);
+            box-shadow: 0 12px 30px rgba(255, 107, 139, 0.3);
+        }
+
+        .card-icon {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.4rem;
+            color: var(--accent-pink);
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            color: #666;
+        }
+
+        /* Footer styling */
+        footer {
+            margin-top: 60px;
+            font-size: 0.85rem;
+            color: #A0A0A0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Sui Wei-En" class="profile-pic">
+        <h1>Sui Wei-En ✨</h1>
+        <p>Biomedical Engineering & Structural Research</p>
+    </div>
+
+    <div class="grid-container">
+
+        <a href="#" class="card">
+            <div class="card-icon">🔬</div>
+            <h2>Research Papers</h2>
+            <p>Explore my academic publications, abstracts, and engineering project breakdowns.</p>
+        </a>
+
+        <a href="https://www.linkedin.com/in/sui-wei-en/?skipRedirect=true" class="card" target="_blank">
+            <div class="card-icon">📚</div>
+            <h2>Academic CV</h2>
+            <p>View my experience, education background, and professional timeline on LinkedIn.</p>
+        </a>
+
+        <a href="#" class="card">
+            <div class="card-icon">🎨</div>
+            <h2>Hobbies & Joy</h2>
+            <p>When I'm away from data, I enjoy exploring creative ideas and sharing my favorite things.</p>
+        </a>
+
+        <a href="https://www.linkedin.com/in/sui-wei-en/?skipRedirect=true" class="card" target="_blank">
+            <div class="card-icon">🌸</div>
+            <h2>Let's Connect</h2>
+            <p>Let's collaborate on engineering projects! Drop me a message on LinkedIn.</p>
+        </a>
+
+    </div>
+
+    <footer>
+        © 2026 Made with 💕 by Sui Wei-En
+    </footer>
+
+</body>
+</html>
