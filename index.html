@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sui Wei En | AI & Music Emotion Researcher ✨</title>
+    <title>Sui Wei-En | AI & Music Emotion Researcher ✨</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
@@ -28,6 +28,44 @@
             align-items: center;
         }
 
+        /* --- LANGUAGE TOGGLE BUTTON --- */
+        .lang-toggle-container {
+            width: 100%;
+            max-width: 750px;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+
+        .lang-btn {
+            background-color: var(--content-bg);
+            color: var(--accent-pink);
+            border: 2px solid var(--line-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(255, 182, 193, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: var(--accent-pink);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* --- HIDING UNSELECTED LANGUAGE --- */
+        /* By default, hide Chinese elements if the page html tag is 'en' */
+        html[lang="en"] .lang-zh {
+            display: none !important;
+        }
+        /* Hide English elements when the page html tag is switched to 'zh' */
+        html[lang="zh"] .lang-en {
+            display: none !important;
+        }
+
         /* --- CENTRAL CONTENT SHEET --- */
         .container {
             background-color: var(--content-bg);
@@ -37,7 +75,6 @@
             padding: 40px;
             box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4);
             box-sizing: border-box;
-            margin-top: 20px;
             margin-bottom: 40px;
         }
 
@@ -167,40 +204,66 @@
 </head>
 <body>
 
+    <!-- 🌐 LANGUAGE TOGGLE CONTAINER -->
+    <div class="lang-toggle-container">
+        <button class="lang-btn" id="langToggleBtn" onclick="toggleLanguage()">中文</button>
+    </div>
+
     <div class="container">
 
         <header class="profile-header">
-            <img src="avatar.jpg" alt="Sui Wei-En" class="profile-pic">
-            <h1>Sui Wei-En ✨</h1>
-            <p>Multidisciplinary Researcher in AI Music Emotion Recognition & Affective Computing</p>
+            <img src="avatar.jpg" alt="Sui Wei En" class="profile-pic">
+            <h1>Sui Wei En ✨</h1>
+            <p>
+                <span class="lang-en">Multidisciplinary Researcher in AI Music Emotion Recognition & Affective Computing</span>
+                <span class="lang-zh">人工智能音乐情感识别与情感计算交叉学科研究员</span>
+            </p>
             
             <div class="links-row">
                 <a href="https://scholar.google.com/citations?user=yGk77-kAAAAJ&hl=en" class="btn" target="_blank">🎓 Google Scholar</a>
                 <a href="https://www.linkedin.com/in/sui-wei-en/?skipRedirect=true" class="btn" target="_blank">💼 LinkedIn</a>
-                <a href="mailto:weienforcoding@gmail.com" class="btn">🌸 Contact Me: weienforcoding@gmail.com</a>
+                <a href="mailto:weienforcoding@gmail.com" class="btn">
+                    <span class="lang-en">🌸 Contact Me</span>
+                    <span class="lang-zh">🌸 联系方式</span>
+                </a>
             </div>
         </header>
 
+        <!-- ✨ ABOUT ME SECTION -->
         <section>
-            <h2>✨ About Me</h2>
+            <h2>
+                <span class="lang-en">✨ About Me</span>
+                <span class="lang-zh">✨ 关于我</span>
+            </h2>
             <div class="item-desc">
-                Hello! I am a multidisciplinary researcher with academic background in Statistical Data Science and Machine Learning. 
-                I am deeply passionate about bridging technical architectural boundaries with practical solutions, 
-                with a specific research focus on <strong>Music Emotion Recognition (MER), Affective Computing, and Deep Learning</strong> 
-                (such as Transformers and RNNs). I love turning raw datasets and music into beautiful insights and mapping out data structures 
-                that can understand human emotional expression.
+                <span class="lang-en">
+                    Hello! I am a multidisciplinary researcher with an academic background in Statistical Data Science and Machine Learning. 
+                    I am deeply passionate about bridging technical architectural boundaries with practical solutions, 
+                    with a specific research focus on <strong>Music Emotion Recognition (MER), Affective Computing, and Deep Learning</strong> 
+                    (such as Transformers and RNNs). I love turning raw datasets and music into beautiful insights and mapping out data structures 
+                    that can understand human emotional expression.
+                </span>
+                <span class="lang-zh">
+                    你好！我生于马来西亚槟城，祖籍福建诏安，自幼学习钢琴，现是一名拥有统计数据科学，机器学习学术和音乐背景的交叉学科研究员。
+                    回应灵魂深处的召唤，我很高兴可以用知识服务兴趣。目前主要研究方向为<strong>音乐情感识别 (MER)、情感计算以及深度学习架构</strong>。
+                    我喜欢观察原始数据集和音乐，并构建出能够理解人类情感表达的数据结构。
+                </span>
             </div>
         </section>
 
+        <!-- 📚 ACADEMIC BACKGROUND SECTION -->
         <section>
-            <h2>📚 Academic Background</h2>
+            <h2>
+                <span class="lang-en">📚 Academic Background</span>
+                <span class="lang-zh">📚 学术背景</span>
+            </h2>
             
             <div class="item">
                 <div class="item-title">Universiti Tunku Abdul Rahman</div>
                 <div class="item-meta">MSc in Mathematics (By Research) | Jul 2025 - Present</div>
                 <div class="item-desc">
-                    Recipient of the Research Scholar Scheme (RSS). My research field is to explore the relationship between symbolic music and emotion, through statistical and AI methods.
-
+                    <span class="lang-en">Recipient of the Research Scholar Scheme (RSS). My research field is to explore the relationship between symbolic music and emotion, through statistical and AI methods.</span>
+                    <span class="lang-zh">研究学者计划 (RSS) 奖学金获得者。我的研究领域是通过统计和人工智能方法，探索符号音乐（结构化乐谱数据）与情感之间的联系。</span>
                 </div>
             </div>
 
@@ -208,41 +271,59 @@
                 <div class="item-title">Heriot-Watt University Malaysia</div>
                 <div class="item-meta">BSc (Hons) in Statistical Data Science | Apr 2021 - May 2025</div>
                 <div class="item-desc">
-                    Graduated with a CGPA of 3.5. Recognized as a <em>Women in Science and Engineering Scholar</em>
+                    <span class="lang-en">Graduated with a CGPA of 3.5. Recognized as a <em>Women in Science and Engineering Scholar</em>.</span>
+                    <span class="lang-zh">以 3.5 的 CGPA 毕业。荣获<em>科学与工程领域杰出女性学者 (Women in Science and Engineering Scholar)</em> 称号。</span>
                 </div>
             </div>
         </section>
 
+        <!-- 🔬 RESEARCH & PUBLICATIONS SECTION -->
         <section>
-            <h2>🔬 Publications & Research</h2>
+            <h2>
+                <span class="lang-en">🔬 Publications & Research</span>
+                <span class="lang-zh">🔬 学术发表与研究</span>
+            </h2>
             
             <div class="item">
-                <div class="item-title">Published Works</div>
+                <div class="item-title">
+                    <span class="lang-en">Published Works</span>
+                    <span class="lang-zh">已发表论文</span>
+                </div>
                 <div class="paper-blockquote">
                     <strong>"Encoding Music Score Data for Emotional Expression Prediction in Western Classical Music Pieces"</strong><br>
                     <span style="color:#777; font-size:0.85rem;">Sui W.E., et al. | Published at <strong>ACM Multimedia Asia 2025</strong></span>
                 </div>
                 <div class="item-desc">
-                    Developed methodology to encode classical music structure for computational processing to capture and predict human emotions via machine learning architectures.
+                    <span class="lang-en">Developed methodology to encode classical music structure for computational processing to capture and predict human emotions via machine learning architectures.</span>
+                    <span class="lang-zh">开发了一种将西方古典乐谱结构进行数据编码的方法，使其能够通过计算处理，并利用机器学习架构捕捉与预测人类的情感表达。</span>
                 </div>
                 <div style="margin-top:15px; display: flex; gap: 10px; flex-wrap: wrap;">
                     <a href="Encoding Music Score.pdf" class="btn" style="padding: 6px 14px; font-size:0.85rem; background-color: var(--accent-pink); color: white;" target="_blank">📄 Read Full PDF</a>
-                    
                     <a href="https://orcid.org/0009-0004-4507-7754" class="btn" style="padding: 6px 14px; font-size:0.85rem;" target="_blank">🌐 View ORCID Profile</a>
+                </div>
             </div>
         </section>
 
+        <!-- 💼 WORK & INTERNSHIP EXPERIENCE SECTION -->
         <section>
-            <h2>💼 Industry Experience</h2>
+            <h2>
+                <span class="lang-en">💼 Industry Experience</span>
+                <span class="lang-zh">💼 行业经历</span>
+            </h2>
 
             <div class="item">
                 <div class="item-title">Estée Lauder</div>
                 <div class="item-meta">Data Analytic Intern | May 2025 - Aug 2025</div>
                 <div class="item-desc">
-                    <ul>
+                    <ul class="lang-en">
                         <li>Conducted comprehensive sales performance analysis across 5 divisions to evaluate trends, SKU performance, and YoY growth.</li>
                         <li>Designed and standardized executive presentation decks and interactive dashboards for regional brand managers.</li>
                         <li>Built and deployed custom VBA macros to cross-link workbooks for data efficiency and automated dataset cleanups.</li>
+                    </ul>
+                    <ul class="lang-zh">
+                        <li>对全球的五个区域进行了全面的销售业绩分析，评估趋势、SKU 表现和同比增长（YoY），以支持区域商业策略。</li>
+                        <li>为区域品牌经理设计并规范了高管层级的演示文稿及交互式数据看板。</li>
+                        <li>开发并部署了自定义 VBA 宏，实现多个工作簿之间的数据自动关联，提高数据效率并确保准确性。</li>
                     </ul>
                 </div>
             </div>
@@ -251,10 +332,15 @@
                 <div class="item-title">Vitrox Technology Sdn. Bhd.</div>
                 <div class="item-meta">Technical Support Trainee | Jun 2024 - Aug 2024</div>
                 <div class="item-desc">
-                    <ul>
+                    <ul class="lang-en">
                         <li>Developed and deployed two workflow automation pipelines using Google App Script, Sheets, and Gmail.</li>
                         <li>Created a live internal stock inventory tracking tool with built-in real-time email warning thresholds.</li>
                         <li>Designed a synchronized registration system tracking forms, automating event queues, and link-scheduling inside Google Calendar.</li>
+                    </ul>
+                    <ul class="lang-zh">
+                        <li>使用 Google App Script 开发并部署了两个自动化工作流系统，整合 Google 表格和 Gmail 以实现实时数据更新。</li>
+                        <li>创建了一个库存管理系统，以简化库存监控并实现自动邮件预警触发。</li>
+                        <li>设计并实现了培训/活动申请系统，将表单与数据存储相连，并在 Google 日历中自动安排活动日程。</li>
                     </ul>
                 </div>
             </div>
@@ -263,26 +349,53 @@
                 <div class="item-title">SK Mega Scaffolding Sdn. Bhd.</div>
                 <div class="item-meta">Assistant Accountant | Apr 2022 - Aug 2022</div>
                 <div class="item-desc">
-                    <ul>
+                    <ul class="lang-en">
                         <li>Handled financial logs and daily ledger processes using standard SQL structures and custom Excel functions.</li>
                         <li>Evaluated business operational costs to provide optimization recommendations focused on margin maximization.</li>
+                    </ul>
+                    <ul class="lang-zh">
+                        <li>每天使用 SQL 和 Excel 执行各项会计相关职责，处理财务日志和日常分类账流转。</li>
+                        <li>通过提供成本削减、收入提升和利润最大化方面的具体建议，评估并优化财务运营。</li>
                     </ul>
                 </div>
             </div>
         </section>
 
+        <!-- 🎨 HOBBIES & HAPPY THINGS SECTION -->
         <section>
-            <h2>🎨 Hobbies & Happy Things</h2>
+            <h2>
+                <span class="lang-en">🎨 Hobbies & Happy Things</span>
+                <span class="lang-zh">🎨 兴趣爱好与生活</span>
+            </h2>
             <div class="item-desc">
-                When I am not training models, testing hypotheses, or analyzing music and emotion data, I like to express myself creatively:
+                <span class="lang-en">When I am not training models, testing hypotheses, or analyzing music and emotion data, I like to express myself creatively:</span>
+                <span class="lang-zh">当我不在训练模型、检验假设或分析音乐与情感数据时，我喜欢通过以下方式拥抱生活：</span>
+                
                 <ul>
-                    <!-- <li>🖥️ <strong>Creative Production:</strong> Exploring 3D Modeling via Autodesk and editing video sequences using CapCut and iMovie.</li> -->
-                    <li>🌱 <strong>Leadership & Innovation:</strong> Founded and managed a community of 70+ students as the former Technopreneur Club President.</li>
-                    <li>🏊🏋️🏸⛸️🏄‍♀️ <strong>Daily Adventure:</strong>  I enjoy swimming, going to the gym, playing badminton, ice skating, and surfing.</li>
-                    <li>🎹 <strong>Music:</strong> I also obtained ABRSM Piano Grade 8. My favourite composers are Frédéric Chopin and Johannes Brahms. </li>
-                    <li>🎶 <strong>Artists:</strong> My favourite artists are Mayday, David Tao, New Jeans, Yanzi Sun, JJ Lin, Ryuichi Sakamoto, Twice, Khalil Fong. </li>
-                    <li>𝓐𝓷𝓲𝓶𝓮 <strong>:</strong> My favourite Anime are Attack on Titan, Your lie in April, Haikyuu!, Jujutsu Kaisen, Toradora. </li>
-                    <li>🏮✨ <strong>Anime Character:</strong> My favourite Anime Characters are Levi Ackerman, Kōshi Sugawara, Yuta Okkotsu. </li>
+                    <li>
+                        <span class="lang-en">🌱 <strong>Leadership & Innovation:</strong> Founded and managed a community of 70+ students as the former Technopreneur Club President.</span>
+                        <span class="lang-zh">🌱 <strong>领导力与创新：</strong> 作为前创业科技俱乐部 (Technopreneur Club) 主席，创立该俱乐部并激励了 70 多名成员利用科技进行创新。</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">🏊🏋️🏸🏽⛸️🏄‍♀️ <strong>Daily Adventure:</strong> I enjoy swimming, going to the gym, playing badminton, ice skating, and surfing.</span>
+                        <span class="lang-zh">🏊🏋️🏸🏽⛸️🏄‍♀️ <strong>日常冒险：</strong> 我热爱运动，喜欢游泳、健身、打羽毛球、滑冰和冲浪。</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">🎹 <strong>Music:</strong> I obtained ABRSM Piano Grade 8. My favourite composers are Frédéric Chopin and Johannes Brahms.</span>
+                        <span class="lang-zh">🎹 <strong>古典音乐：</strong> 已考取英国皇家音乐学院 (ABRSM) 钢琴八级证书。最喜欢的作曲家是肖邦和勃拉姆斯。</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">🎶 <strong>Artists:</strong> My favourite artists are Mayday, David Tao, New Jeans, Yanzi Sun, JJ Lin, Ryuichi Sakamoto, Twice, Khalil Fong.</span>
+                        <span class="lang-zh">🎶 <strong>喜欢的手艺人/歌手：</strong> 五月天、陶喆、NewJeans、孙燕姿、林俊杰、坂本龙一、Twice、方大同。</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">𝓐𝓷𝓲𝓶𝓮 <strong>:</strong> My favourite Anime are Attack on Titan, Your lie in April, Haikyuu!, Jujutsu Kaisen, Toradora.</span>
+                        <span class="lang-zh">𝓐𝓷𝓲𝓶𝓮 <strong>动漫：</strong> 最喜欢的作品有《进击的巨人》、《四月是你的谎言》、《排球少年！！》、《咒术回战》、《龙与虎》。</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">🏮✨ <strong>Anime Character:</strong> My favourite Anime Characters are Levi Ackerman, Kōshi Sugawara, Yuta Okkotsu.</span>
+                        <span class="lang-zh">🏮✨ <strong>动漫角色：</strong> 最喜欢的角色是利威尔·阿克曼、菅原孝支、乙骨忧太。</span>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -292,6 +405,22 @@
     <footer>
         © 2026 Made with 💕 by Sui Wei-En
     </footer>
+
+    <!-- 🌐 JAVASCRIPT FOR TOGGLE LOGIC -->
+    <script>
+        function toggleLanguage() {
+            const htmlTag = document.documentElement;
+            const btn = document.getElementById('langToggleBtn');
+            
+            if (htmlTag.getAttribute('lang') === 'en') {
+                htmlTag.setAttribute('lang', 'zh');
+                btn.textContent = 'English';
+            } else {
+                htmlTag.setAttribute('lang', 'en');
+                btn.textContent = '中文';
+            }
+        }
+    </script>
 
 </body>
 </html>
